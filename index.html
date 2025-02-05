@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 2px solid grey;
+            border-radius: 50%;
+            padding: 12px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <video  id="v1" autoplay controls loop src="" height="250" width="250"></video>
+    <script>
+        let i = 5;
+        let timer = document.getElementById("p1");
+        let videoElement=document.getElementById("v1")
+        let timerId=setInterval(() =>{
+            // console.log(i--) 
+            timer.innerHTML=i--
+            if(i<0){
+                clearInterval(timerId)
+                timer.style.display="none"
+                videoElement.src="./Sammohanam telugu songs WhatsApp status videos.mp4"
+            }
+        },1000)
+    </script>
+</body>
+</html>
